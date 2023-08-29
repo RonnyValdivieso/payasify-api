@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { AwardsModule } from './awards/awards.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { ClownsModule } from './clowns/clowns.module';
 import entities from './db';
 
 @Module({
@@ -23,7 +24,8 @@ import entities from './db';
 			}),
 			inject: [ConfigService]
 		}),
-		AwardsModule
+		AwardsModule,
+		ClownsModule
 	],
 	controllers: [AppController],
 	providers: [AppService]

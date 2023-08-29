@@ -10,6 +10,7 @@ async function bootstrap() {
 		.setDescription('Golden Wig Awards API')
 		.setVersion('1.0')
 		.addTag('awards')
+		.addTag('clowns')
 		.build();
 	const document = SwaggerModule.createDocument(app, config);
 	SwaggerModule.setup('api', app, document);
